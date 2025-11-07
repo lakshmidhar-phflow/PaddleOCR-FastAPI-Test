@@ -1,0 +1,42 @@
+# Large image folders and files
+app/images/
+output/
+images/*.jpg
+images/*.jpeg
+images/*.png
+images/*.bmp
+images/*.tiff
+images/*.tif
+
+# Temporary files
+temp_img.*
+*.tmp
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker
+.dockerignore
+
+# Claude AI files
+.claude/
