@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  paddleocr-api:
+    build: .
+    container_name: paddleocr-gpu-api
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./temp:/app/temp
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped
+
+# For development, you can uncomment this to mount your source code
+#  volumes:
+#    - ./app.py:/app/app.py
+#    - ./requirements.txt:/app/requirements.txt

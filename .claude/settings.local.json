@@ -12,7 +12,13 @@
       "Bash(docker exec:*)",
       "Bash(python:*)",
       "Bash(original_app.py)",
-      "Bash(docker start:*)"
+      "Bash(docker start:*)",
+      "Bash(git rm:*)",
+      "Bash(git add:*)",
+      "Bash(pip install:*)",
+      "Bash(docker search:*)",
+      "Bash(docker pull:*)",
+      "Bash(docker-compose down:*)"
     ],
     "deny": [],
     "ask": []
